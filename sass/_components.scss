@@ -1,0 +1,98 @@
+$primary-color: #2c303b;
+$white-color: #ffffff;
+$light-secondary-color: #fffebe;
+$medium-secondary-color: #fffe7e;
+$dark-secondary-color: #fffe3e;
+
+@mixin btn-default{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+    i{
+      font-size: 1.3rem;
+      font-weight: bolder;
+    }
+}
+
+@mixin btn-main-custm {
+  padding: 0.25rem 0.8rem;
+  border-radius: 0.25rem;
+  @include btn-default();
+}
+
+@mixin btn-sm-custm {
+  font-size: 0.75rem;
+  padding: 0.1rem 1rem;
+  @include btn-default();
+}
+
+@mixin btn-lg-custm {
+  font-size: 0.25rem 2.5;
+  padding: 0.5rem 1.5rem;
+  @include btn-default();
+}
+
+.btn-main {
+  @include btn-main-custm();
+  background-color: $medium-secondary-color;
+  color: $primary-color;
+  
+  &:hover {
+    background-color: $light-secondary-color;
+    color: $primary-color;
+  }
+  &-sm {
+    @extend .btn-main;
+    @include btn-sm-custm();
+  }
+  &-lg {
+    @extend .btn-main;
+    @include btn-lg-custm();
+  }
+}
+
+.btn-sec {
+  @include btn-main-custm();
+  background-color: $primary-color;
+  color: $white-color;
+  border: none;
+  &:hover {
+    background-color: $medium-secondary-color;
+    color: $primary-color;
+  }
+  &-sm {
+    @extend .btn-sec;
+    @include btn-sm-custm();
+  }
+  &-lg {
+    @extend .btn-sec;
+    @include btn-lg-custm();
+  }
+}
+
+.main-menu {
+  margin-bottom: 0;
+  li {
+    font-size: 1rem;
+    list-style: none;
+    display: inline;
+    margin-right: 2rem;
+    a {
+      border-radius: 5%;
+      color: $white-color;
+      text-decoration: none;
+      padding: 0.65rem;
+      &:hover {
+        // border-radius: 5%;
+        color: $primary-color;
+        background-color: $dark-secondary-color;
+      }
+    }
+  }
+}
+
+.btn-menu-responsive{
+    display: none;
+}

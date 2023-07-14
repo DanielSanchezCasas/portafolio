@@ -1,0 +1,101 @@
+@use "components";
+
+html {
+  max-width: 100vw;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 5rem;
+  border-bottom: solid 7px components.$medium-secondary-color;
+  background-color: components.$primary-color;
+}
+
+.logo img {
+  max-width: 6rem;
+}
+
+.menu-option {
+  display: flex;
+  gap: 10px;
+  font-size: 1.2rem;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: components.$primary-color;
+  overflow: hidden;
+  transition: all 0.3s ease 0s;
+  .overlay-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    a {
+      text-decoration: none;
+      padding: 15px;
+      font-size: 36px;
+      display: block;
+      transition: all 0.3s ease 0s;
+      font-weight: 700;
+      color: #eceff1;
+      &:hover {
+        color: components.$dark-secondary-color;
+      }
+      &:focus {
+        color: components.$dark-secondary-color;
+      }
+    }
+  }
+  .close {
+    text-decoration: none;
+    color: components.$white-color;
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+    &:hover {
+      color: components.$dark-secondary-color;
+    }
+    &:focus {
+      color: components.$dark-secondary-color;
+    }
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .nav {
+    justify-content: space-between;
+  }
+  .menu-option {
+    margin-right: 1rem;
+  }
+  .btn-menu-responsive {
+    display: block;
+  }
+}
