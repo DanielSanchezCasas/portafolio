@@ -124,10 +124,19 @@ body {
   margin: 0;
 }
 
+section {
+  margin-top: 5rem;
+}
+
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
   width: 100%;
   height: 5rem;
   border-bottom: solid 7px #fffe7e;
@@ -162,6 +171,7 @@ body {
   align-items: center;
   justify-content: center;
   border-bottom: none;
+  z-index: 2;
 }
 .overlay .overlay-content a {
   text-decoration: none;
@@ -223,11 +233,15 @@ body {
   border-bottom: solid 7px #fffe3e;
 }
 .section-home .conteiner-background {
+  z-index: 0;
+  display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 0;
 }
 .section-home .conteiner-background .carta {
+  background-color: red;
+  width: 100%;
+  height: 400px;
   z-index: 1;
 }
 .section-home .conteiner-background .night {
@@ -270,164 +284,44 @@ body {
   transform: translateX(50%) rotateZ(-45deg);
 }
 .section-home .conteiner-background .night .shooting_star:nth-child(1) {
-  top: calc(30% - 8px);
-  left: calc(50% - 73px);
-  animation-delay: 6406ms;
+  top: calc(30% - -4px);
+  left: calc(50% - 45px);
+  animation-delay: 9716ms;
 }
 .section-home .conteiner-background .night .shooting_star:nth-child(1)::before, .section-home .conteiner-background .night .shooting_star:nth-child(1)::after {
-  animation-delay: 6406ms;
+  animation-delay: 9716ms;
 }
 .section-home .conteiner-background .night .shooting_star:nth-child(2) {
-  top: calc(30% - 751px);
-  left: calc(50% - 135px);
-  animation-delay: 7278ms;
+  top: calc(30% - 142px);
+  left: calc(50% - 207px);
+  animation-delay: 6164ms;
 }
 .section-home .conteiner-background .night .shooting_star:nth-child(2)::before, .section-home .conteiner-background .night .shooting_star:nth-child(2)::after {
-  animation-delay: 7278ms;
+  animation-delay: 6164ms;
 }
 .section-home .conteiner-background .night .shooting_star:nth-child(3) {
-  top: calc(30% - 153px);
-  left: calc(50% - 69px);
-  animation-delay: 6575ms;
+  top: calc(30% - 260px);
+  left: calc(50% - 86px);
+  animation-delay: 9695ms;
 }
 .section-home .conteiner-background .night .shooting_star:nth-child(3)::before, .section-home .conteiner-background .night .shooting_star:nth-child(3)::after {
-  animation-delay: 6575ms;
+  animation-delay: 9695ms;
 }
 .section-home .conteiner-background .night .shooting_star:nth-child(4) {
-  top: calc(30% - 249px);
-  left: calc(50% - 193px);
-  animation-delay: 9650ms;
+  top: calc(30% - 90px);
+  left: calc(50% - 14px);
+  animation-delay: 4703ms;
 }
 .section-home .conteiner-background .night .shooting_star:nth-child(4)::before, .section-home .conteiner-background .night .shooting_star:nth-child(4)::after {
-  animation-delay: 9650ms;
+  animation-delay: 4703ms;
 }
 .section-home .conteiner-background .night .shooting_star:nth-child(5) {
-  top: calc(30% - -108px);
-  left: calc(50% - 90px);
-  animation-delay: 1907ms;
+  top: calc(30% - 104px);
+  left: calc(50% - 108px);
+  animation-delay: 8230ms;
 }
 .section-home .conteiner-background .night .shooting_star:nth-child(5)::before, .section-home .conteiner-background .night .shooting_star:nth-child(5)::after {
-  animation-delay: 1907ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(6) {
-  top: calc(30% - 181px);
-  left: calc(50% - 127px);
-  animation-delay: 4980ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(6)::before, .section-home .conteiner-background .night .shooting_star:nth-child(6)::after {
-  animation-delay: 4980ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(7) {
-  top: calc(30% - 718px);
-  left: calc(50% - 281px);
-  animation-delay: 7670ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(7)::before, .section-home .conteiner-background .night .shooting_star:nth-child(7)::after {
-  animation-delay: 7670ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(8) {
-  top: calc(30% - 777px);
-  left: calc(50% - 28px);
-  animation-delay: 2226ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(8)::before, .section-home .conteiner-background .night .shooting_star:nth-child(8)::after {
-  animation-delay: 2226ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(9) {
-  top: calc(30% - -180px);
-  left: calc(50% - 292px);
-  animation-delay: 7647ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(9)::before, .section-home .conteiner-background .night .shooting_star:nth-child(9)::after {
-  animation-delay: 7647ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(10) {
-  top: calc(30% - 122px);
-  left: calc(50% - 72px);
-  animation-delay: 9154ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(10)::before, .section-home .conteiner-background .night .shooting_star:nth-child(10)::after {
-  animation-delay: 9154ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(11) {
-  top: calc(30% - -195px);
-  left: calc(50% - 263px);
-  animation-delay: 3963ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(11)::before, .section-home .conteiner-background .night .shooting_star:nth-child(11)::after {
-  animation-delay: 3963ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(12) {
-  top: calc(30% - 558px);
-  left: calc(50% - 204px);
-  animation-delay: 6419ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(12)::before, .section-home .conteiner-background .night .shooting_star:nth-child(12)::after {
-  animation-delay: 6419ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(13) {
-  top: calc(30% - 609px);
-  left: calc(50% - 240px);
-  animation-delay: 8060ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(13)::before, .section-home .conteiner-background .night .shooting_star:nth-child(13)::after {
-  animation-delay: 8060ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(14) {
-  top: calc(30% - 408px);
-  left: calc(50% - 260px);
-  animation-delay: 3735ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(14)::before, .section-home .conteiner-background .night .shooting_star:nth-child(14)::after {
-  animation-delay: 3735ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(15) {
-  top: calc(30% - 675px);
-  left: calc(50% - 186px);
-  animation-delay: 5673ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(15)::before, .section-home .conteiner-background .night .shooting_star:nth-child(15)::after {
-  animation-delay: 5673ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(16) {
-  top: calc(30% - 445px);
-  left: calc(50% - 98px);
-  animation-delay: 8078ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(16)::before, .section-home .conteiner-background .night .shooting_star:nth-child(16)::after {
-  animation-delay: 8078ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(17) {
-  top: calc(30% - 634px);
-  left: calc(50% - 219px);
-  animation-delay: 6186ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(17)::before, .section-home .conteiner-background .night .shooting_star:nth-child(17)::after {
-  animation-delay: 6186ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(18) {
-  top: calc(30% - 693px);
-  left: calc(50% - 143px);
-  animation-delay: 6723ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(18)::before, .section-home .conteiner-background .night .shooting_star:nth-child(18)::after {
-  animation-delay: 6723ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(19) {
-  top: calc(30% - -129px);
-  left: calc(50% - 205px);
-  animation-delay: 7784ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(19)::before, .section-home .conteiner-background .night .shooting_star:nth-child(19)::after {
-  animation-delay: 7784ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(20) {
-  top: calc(30% - 345px);
-  left: calc(50% - 211px);
-  animation-delay: 1601ms;
-}
-.section-home .conteiner-background .night .shooting_star:nth-child(20)::before, .section-home .conteiner-background .night .shooting_star:nth-child(20)::after {
-  animation-delay: 1601ms;
+  animation-delay: 8230ms;
 }
 
 @keyframes tail {

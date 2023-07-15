@@ -32,6 +32,7 @@ function openNav() {
   }
 
   checkHeight(mobileMenu, targetHeight, applyStyle, removeStyle);
+  toggleScrolling(false);
 }
 
 function closeNav() {
@@ -49,4 +50,15 @@ function closeNav() {
   checkHeight(mobileMenu, targetHeight, applyStyle, removeStyle);
 
   mobileMenu.style.height = "0%";
+  toggleScrolling(true);
+}
+
+
+function toggleScrolling(enableScroll) {
+  const body = document.body;
+  if (enableScroll) {
+    body.style.overflow = "auto";
+  } else {
+    body.style.overflow = "hidden";
+  }
 }
