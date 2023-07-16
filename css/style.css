@@ -124,10 +124,6 @@ body {
   margin: 0;
 }
 
-section {
-  margin-top: 5rem;
-}
-
 .nav {
   display: flex;
   align-items: center;
@@ -138,13 +134,13 @@ section {
   right: 0;
   z-index: 1;
   width: 100%;
-  height: 5rem;
+  height: 4rem;
   border-bottom: solid 7px #fffe7e;
   background-color: #2c303b;
 }
 
 .logo img {
-  max-width: 6rem;
+  max-width: 4rem;
 }
 
 .menu-option {
@@ -227,8 +223,7 @@ section {
 }
 .section-home {
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  height: calc(100vh - 5rem);
-  overflow: hidden;
+  min-height: 100vh;
   display: flex;
   border-bottom: solid 7px #fffe3e;
 }
@@ -237,22 +232,26 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  width: 100%;
 }
 .section-home .conteiner-background .carta {
-  background-color: red;
-  width: 100%;
-  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
   z-index: 1;
 }
 .section-home .conteiner-background .night {
   position: relative;
-  width: 100%;
-  height: 100%;
+  left: -10%;
+}
+.section-home .conteiner-background .night .sky-conteiner {
   transform: rotateZ(45deg);
 }
-.section-home .conteiner-background .night .shooting_star {
+.section-home .conteiner-background .night .sky-conteiner .shooting_star {
   position: absolute;
-  left: 50%;
+  left: 20%;
   top: 50%;
   height: 2px;
   background: linear-gradient(-45deg, #fffe7e, rgba(0, 0, 255, 0));
@@ -260,7 +259,7 @@ section {
   filter: drop-shadow(0 0 6px rgb(105, 155, 255));
   animation: tail 5000ms ease-in-out infinite, shooting 5000ms ease-in-out infinite;
 }
-.section-home .conteiner-background .night .shooting_star::before {
+.section-home .conteiner-background .night .sky-conteiner .shooting_star::before {
   content: "";
   position: absolute;
   top: calc(50% - 1px);
@@ -271,7 +270,7 @@ section {
   border-radius: 100%;
   animation: shining 5000ms ease-in-out infinite;
 }
-.section-home .conteiner-background .night .shooting_star::after {
+.section-home .conteiner-background .night .sky-conteiner .shooting_star::after {
   content: "";
   position: absolute;
   top: calc(50% - 1px);
@@ -283,45 +282,45 @@ section {
   animation: shining 5000ms ease-in-out infinite;
   transform: translateX(50%) rotateZ(-45deg);
 }
-.section-home .conteiner-background .night .shooting_star:nth-child(1) {
-  top: calc(30% - -4px);
-  left: calc(50% - 45px);
-  animation-delay: 9716ms;
+.section-home .conteiner-background .night .sky-conteiner .shooting_star:nth-child(1) {
+  top: calc(30% - 268px);
+  left: calc(50% - 221px);
+  animation-delay: 1496ms;
 }
-.section-home .conteiner-background .night .shooting_star:nth-child(1)::before, .section-home .conteiner-background .night .shooting_star:nth-child(1)::after {
-  animation-delay: 9716ms;
+.section-home .conteiner-background .night .sky-conteiner .shooting_star:nth-child(1)::before, .section-home .conteiner-background .night .sky-conteiner .shooting_star:nth-child(1)::after {
+  animation-delay: 1496ms;
 }
-.section-home .conteiner-background .night .shooting_star:nth-child(2) {
-  top: calc(30% - 142px);
-  left: calc(50% - 207px);
-  animation-delay: 6164ms;
+.section-home .conteiner-background .night .sky-conteiner .shooting_star:nth-child(2) {
+  top: calc(30% - -157px);
+  left: calc(50% - 123px);
+  animation-delay: 8392ms;
 }
-.section-home .conteiner-background .night .shooting_star:nth-child(2)::before, .section-home .conteiner-background .night .shooting_star:nth-child(2)::after {
-  animation-delay: 6164ms;
+.section-home .conteiner-background .night .sky-conteiner .shooting_star:nth-child(2)::before, .section-home .conteiner-background .night .sky-conteiner .shooting_star:nth-child(2)::after {
+  animation-delay: 8392ms;
 }
-.section-home .conteiner-background .night .shooting_star:nth-child(3) {
-  top: calc(30% - 260px);
-  left: calc(50% - 86px);
-  animation-delay: 9695ms;
+.section-home .conteiner-background .night .sky-conteiner .shooting_star:nth-child(3) {
+  top: calc(30% - 51px);
+  left: calc(50% - 440px);
+  animation-delay: 6130ms;
 }
-.section-home .conteiner-background .night .shooting_star:nth-child(3)::before, .section-home .conteiner-background .night .shooting_star:nth-child(3)::after {
-  animation-delay: 9695ms;
+.section-home .conteiner-background .night .sky-conteiner .shooting_star:nth-child(3)::before, .section-home .conteiner-background .night .sky-conteiner .shooting_star:nth-child(3)::after {
+  animation-delay: 6130ms;
 }
-.section-home .conteiner-background .night .shooting_star:nth-child(4) {
-  top: calc(30% - 90px);
-  left: calc(50% - 14px);
-  animation-delay: 4703ms;
+.section-home .conteiner-background .night .sky-conteiner .shooting_star:nth-child(4) {
+  top: calc(30% - 280px);
+  left: calc(50% - 231px);
+  animation-delay: 2618ms;
 }
-.section-home .conteiner-background .night .shooting_star:nth-child(4)::before, .section-home .conteiner-background .night .shooting_star:nth-child(4)::after {
-  animation-delay: 4703ms;
+.section-home .conteiner-background .night .sky-conteiner .shooting_star:nth-child(4)::before, .section-home .conteiner-background .night .sky-conteiner .shooting_star:nth-child(4)::after {
+  animation-delay: 2618ms;
 }
-.section-home .conteiner-background .night .shooting_star:nth-child(5) {
-  top: calc(30% - 104px);
-  left: calc(50% - 108px);
-  animation-delay: 8230ms;
+.section-home .conteiner-background .night .sky-conteiner .shooting_star:nth-child(5) {
+  top: calc(30% - -168px);
+  left: calc(50% - 185px);
+  animation-delay: 3270ms;
 }
-.section-home .conteiner-background .night .shooting_star:nth-child(5)::before, .section-home .conteiner-background .night .shooting_star:nth-child(5)::after {
-  animation-delay: 8230ms;
+.section-home .conteiner-background .night .sky-conteiner .shooting_star:nth-child(5)::before, .section-home .conteiner-background .night .sky-conteiner .shooting_star:nth-child(5)::after {
+  animation-delay: 3270ms;
 }
 
 @keyframes tail {
