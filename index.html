@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo.png" />
     <title>Portafolio - Daniel Sánchez C.</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
@@ -45,15 +46,24 @@
 
     <section class="section-about-me">
       <div class="conteiner-about-me">
-          <div class="about-me">
-              <h1 class="about-me__heading">Iniciar sesión</h1>
-              <span class="about-me__circuit-mask"></span>
+        <div class="about-me mx-3">
+          <div class="row align-items-center">
+            <div class="col-md-4 col-sm-6 order-md-first my-3 text-center">
+              <img src="https://www.seekpng.com/png/full/356-3562377_personal-user.png" class="img-fluid px-2" alt="avatar" />
+            </div>
+            <div class="col-md-8 col-sm-6 ">
+              <p class="fs-2 fw-bold">¡Hola! Soy Daniel Sánchez</p>
+              <p class="fw-medium fs-6">Un ingeniero de sistemas recién graduado de la Universidad Central de Colombia.</p>
+              <p class="fw-medium fs-6">Me apasiona la tecnología y estoy constantemente buscando oportunidades para aprender y crecer en este campo.</p>
+            </div>
           </div>
+        </div>
+        <div class="background-circuit">
+          <span class="about-me__circuit-mask"></span>
+        </div>
       </div>
-     
-  </section>
-  
-    
+    </section>
+
     <section class="page-section" id="habilidades">
       <div class="container">
         <!-- Portfolio Section Heading-->
@@ -75,7 +85,7 @@
       <div class="container">
         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contacto</h2>
         <div class="row justify-content-center">
-          <div class=" rounded-3 p-5 m-3">
+          <div class="rounded-3 p-5 m-3">
             <div class="container-sm">
               <form action="">
                 <div class="form-floating rounded-2 mb-3 text-bg-light">
@@ -83,10 +93,10 @@
                   <label for="email">Email</label>
                 </div>
                 <div class="form-floating rounded-2 mb-3 text-bg-light">
-                  <textarea class="form-control" placeholder="Tu comentario aqui" id="comentarioTextArea" style="height: 120px;"></textarea>
+                  <textarea class="form-control" placeholder="Tu comentario aqui" id="comentarioTextArea" style="height: 120px"></textarea>
                   <label for="comentarioTextArea">Comentario</label>
                 </div>
-                <button class="btn-main-lg fw-bolder  justify-content-center col-12 ">Enviar</button>
+                <button class="btn-main-lg fw-bolder justify-content-center col-12">Enviar</button>
               </form>
             </div>
           </div>
