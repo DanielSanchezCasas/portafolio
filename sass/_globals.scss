@@ -17,7 +17,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 999;
   width: 100%;
   height: 4rem;
   border-bottom: solid 7px components.$medium-secondary-color;
@@ -82,6 +82,44 @@ body {
     &:focus {
       color: components.$dark-secondary-color;
     }
+  }
+}
+
+.page-section {
+  padding: 3rem 0;
+}
+.page-section-dark {
+  background-color: components.$primary-dark-color;
+  padding: 6rem 0;
+  .page-section-heading {
+    font-size: 2.25rem;
+    line-height: 2rem;
+  }
+}
+
+.page-section .page-section-heading {
+  font-size: 2.25rem;
+  line-height: 2rem;
+}
+
+.footer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: components.$primary-dark-color;
+  color: #fff;
+}
+.copyright {
+  background-color:  components.$primary-color;
+}
+@media (min-width: 992px) {
+  .page-section .page-section-heading {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+  .page-section-dark .page-section-heading{ 
+    font-size: 3rem;
+    line-height: 2.5rem;
+    
   }
 }
 

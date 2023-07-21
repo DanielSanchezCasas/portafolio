@@ -1,136 +1,114 @@
 @use "components";
 
-.section-home {
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  min-height: 100vh;
-  display: flex;
-  border-bottom: solid 7px components.$dark-secondary-color;
-  .conteiner-background {
-    z-index: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    width: 100%;
-    .carta {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -40%);
-      z-index: 1;
-    }
-    $shooting-time: 5000ms;
-
-    .night {
-      position: relative;
-      left: -10%;
-      // animation: sky 200000ms linear infinite;
-      .sky-conteiner {
-        transform: rotateZ(45deg);
-        .shooting_star {
-          position: absolute;
-          left: 20%;
-          top: 50%;
-          // width: 100px;
-          height: 2px;
-          background: linear-gradient(-45deg, components.$medium-secondary-color, rgba(0, 0, 255, 0));
-          border-radius: 999px;
-
-          filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
-          animation: tail $shooting-time ease-in-out infinite, shooting $shooting-time ease-in-out infinite;
-
-          &::before {
-            content: "";
-            position: absolute;
-            top: calc(50% - 1px);
-            right: 0;
-            // width: 30px;
-            height: 2px;
-            background: linear-gradient(-45deg, rgba(0, 0, 255, 0), components.$medium-secondary-color, rgba(0, 0, 255, 0));
-            transform: translateX(50%) rotateZ(45deg);
-            border-radius: 100%;
-            animation: shining $shooting-time ease-in-out infinite;
-          }
-
-          &::after {
-            content: "";
-            position: absolute;
-            top: calc(50% - 1px);
-            right: 0;
-            // width: 30px;
-            height: 2px;
-            background: linear-gradient(-45deg, rgba(0, 0, 255, 0), components.$medium-secondary-color, rgba(0, 0, 255, 0));
-            transform: translateX(50%) rotateZ(45deg);
-            border-radius: 100%;
-            animation: shining $shooting-time ease-in-out infinite;
-            transform: translateX(50%) rotateZ(-45deg);
-          }
-
-          @for $i from 1 through 5 {
-            &:nth-child(#{$i}) {
-              $delay: random(9999) + 0ms;
-
-              top: calc(30% - #{random(1000) - 200px});
-              left: calc(50% - #{random(500) + 0px});
-              animation-delay: $delay;
-              // opacity: random(50) / 100 + 0.5;
-
-              &::before,
-              &::after {
-                animation-delay: $delay;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+.section-about-me {
+  margin-top: 4rem;
+  position: relative;
+  background: linear-gradient(0deg, #1b1e26 6%, #303440 95%);
+  z-index: -1;
+  overflow: hidden;
 }
 
-@keyframes tail {
-  0% {
-    width: 0;
-  }
-
-  30% {
-    width: 600px;
-  }
-
-  100% {
-    width: 0;
-  }
+.conteiner-about-me {
+  display: grid;
+  place-items: center;
+  height: calc(100vh - 4rem);
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
 }
 
-@keyframes shining {
-  0% {
-    width: 0;
-  }
+.about-me {
+  position: relative;
+  width: 360px;
+  height: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #15171d;
+}
 
+.about-me:before,
+.about-me__circuit-mask {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  display: block;
+  width: 682px;
+  height: 514px;
+}
+
+.about-me:before {
+  background: url(../assets/img/bg-circuito.svg);
+}
+
+.about-me__circuit-mask {
+  display: grid;
+  place-items: center;
+  -webkit-mask: url(../assets/img/bg-circuito.svg);
+  mask: url(../assets/img/bg-circuito.svg);
+}
+
+.about-me__circuit-mask:before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid #00f0ff;
+  animation: onda 8s infinite;
+  animation-delay: 3s;
+}
+
+.about-me__heading {
+  text-align: center;
+}
+
+@keyframes onda {
+  0% {
+    transform: scale(1);
+  }
   50% {
-    width: 30px;
+    transform: scale(16);
   }
-
   100% {
-    width: 0;
+    transform: scale(16);
   }
 }
 
-@keyframes shooting {
-  0% {
-    transform: translateX(0);
-  }
 
-  100% {
-    transform: translateX(300px);
+
+@media screen and (max-width: 767px) {
+  .about-me:before {
+    transform: translate(-50%, -50%) scale(1);
+    /* Estilos para la versión mediana (767px o menos) */
+  }
+  .about-me__circuit-mask {
+    transform: translate(-50%, -50%) scale(1);
+    /* Estilos para la versión mediana (767px o menos) */
   }
 }
 
-@keyframes sky {
-  0% {
-    transform: rotate(45deg);
+/* Estilos para pantallas con ancho máximo de 576px */
+@media screen and (max-width: 576px) {
+  .about-me:before {
+    transform: translate(-50%, -50%) scale(1);
+    /* Estilos para la versión pequeña (576px o menos) */
   }
+  .about-me__circuit-mask {
+    transform: translate(-50%, -50%) scale(1);
+    /* Estilos para la versión pequeña (576px o menos) */
+  }
+}
 
-  100% {
-    transform: rotate(45 + 360deg);
+/* Estilos para pantallas con ancho máximo de 375px */
+@media screen and (max-width: 375px) {
+  .about-me:before {
+    transform: translate(-50%, -50%) scale(1);
+    /* Estilos para la versión extra pequeña (375px o menos) */
+  }
+  .about-me__circuit-mask {
+    transform: translate(-50%, -50%) scale(1);
+    /* Estilos para la versión extra pequeña (375px o menos) */
   }
 }

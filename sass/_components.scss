@@ -1,19 +1,20 @@
 $primary-color: #2c303b;
+$primary-dark-color: #2c3e50;
 $white-color: #ffffff;
 $light-secondary-color: #fffebe;
 $medium-secondary-color: #fffe7e;
 $dark-secondary-color: #fffe3e;
 
-@mixin btn-default{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-    border: none;
-    i{
-      font-size: 1.3rem;
-      font-weight: bolder;
-    }
+@mixin btn-default {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  i {
+    font-size: 1.3rem;
+    font-weight: bolder;
+  }
 }
 
 @mixin btn-main-custm {
@@ -38,7 +39,7 @@ $dark-secondary-color: #fffe3e;
   @include btn-main-custm();
   background-color: $medium-secondary-color;
   color: $primary-color;
-  
+
   &:hover {
     background-color: $light-secondary-color;
     color: $primary-color;
@@ -93,6 +94,16 @@ $dark-secondary-color: #fffe3e;
   }
 }
 
-.btn-menu-responsive{
-    display: none;
+.btn-menu-responsive {
+  display: none;
+}
+
+.btn-social {
+  border-radius: 100%;
+  display: inline-flex;
+  width: 3.25rem;
+  height: 3.25rem;
+  font-size: 1.25rem;
+  justify-content: center;
+  align-items: center;
 }
