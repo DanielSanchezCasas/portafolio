@@ -362,5 +362,36 @@ body {
     transform: scale(16);
   }
 }
+.slider {
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: 4500px; /* Numero de slide (cuentan las duplicadas) */
+}
+
+.slider .slide {
+  height: 150px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2250px); /* Numero de slide (NO cuentan las duplicadas) */
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
