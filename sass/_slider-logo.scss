@@ -1,32 +1,101 @@
+$html-icon: #e44d26;
+$css-icon: #264de4;
+$js-icon: #f0db4f;
+$bootstrap-icon: #563d7c;
+$sass-icon: #cd6799;
+$git-icon: #f05033;
+$java-icon:  #e51837;
+$nodejs-icon: #72aa62;
+
 .slider {
-    align-items: center;
-    justify-content: center;
-    height: 150px;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-    width: 100%; 
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 16); /* Numero de slide (cuentan las duplicadas) */
+}
+
+.slider .slide {
+  height: 150px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ .slider .slide i {
+   font-size: 10rem; 
+ }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
   }
-  
-  .slider .slide-track {
-    animation: scroll 40s linear infinite; 
-    display: flex;
-    width: calc(250px * 18); /* Numero de slide (cuentan las duplicadas) */
+  100% {
+    transform: translateX(calc(-250px * 8)); /* Numero de slide (NO cuentan las duplicadas) */
   }
-  
-  .slider .slide {
-    height: 150px;
-    width: 250px;
-    display: flex;
-    align-items: center;
-  }
-  
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-250px * 9)); /* Numero de slide (NO cuentan las duplicadas) */
-    }
-  }
-  
+}
+
+.icon-hovered {
+  color: var(--hover-color);
+}
+
+/* Colores personalizados para cada icono */
+.html-icon {
+  --hover-color: #e44d26;
+}
+.css-icon {
+  --hover-color: #264de4;
+}
+.js-icon {
+  --hover-color: #f0db4f;
+}
+.bootstrap-icon {
+  --hover-color: #563d7c;
+}
+.sass-icon {
+  --hover-color: #cd6799;
+}
+.git-icon {
+  --hover-color: #f05033;
+}
+.java-icon {
+  --hover-color: #e51837;
+}
+.nodejs-icon {
+  --hover-color: #72aa62;
+}
+
+ .html-icon:hover {
+   color: $html-icon;
+ }
+ .css-icon:hover {
+   color: $css-icon;
+ }
+ .js-icon:hover {
+   color: $js-icon;
+ }
+ .bootstrap-icon:hover {
+   color: $bootstrap-icon;
+ }
+ .sass-icon:hover {
+   color: $sass-icon;
+ }
+ .git-icon:hover {
+   color: $git-icon;
+ }
+ .java-icon:hover {
+   color: $java-icon;
+ }
+ .nodejs-icon:hover {
+   color: $nodejs-icon;
+ }
+

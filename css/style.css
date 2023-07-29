@@ -375,7 +375,7 @@ body {
 .slider .slide-track {
   animation: scroll 40s linear infinite;
   display: flex;
-  width: 4500px; /* Numero de slide (cuentan las duplicadas) */
+  width: 4000px; /* Numero de slide (cuentan las duplicadas) */
 }
 
 .slider .slide {
@@ -383,6 +383,11 @@ body {
   width: 250px;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.slider .slide i {
+  font-size: 10rem;
 }
 
 @keyframes scroll {
@@ -390,8 +395,76 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-2250px); /* Numero de slide (NO cuentan las duplicadas) */
+    transform: translateX(-2000px); /* Numero de slide (NO cuentan las duplicadas) */
   }
+}
+.icon-hovered {
+  color: var(--hover-color);
+}
+
+/* Colores personalizados para cada icono */
+.html-icon {
+  --hover-color: #e44d26;
+}
+
+.css-icon {
+  --hover-color: #264de4;
+}
+
+.js-icon {
+  --hover-color: #f0db4f;
+}
+
+.bootstrap-icon {
+  --hover-color: #563d7c;
+}
+
+.sass-icon {
+  --hover-color: #cd6799;
+}
+
+.git-icon {
+  --hover-color: #f05033;
+}
+
+.java-icon {
+  --hover-color: #e51837;
+}
+
+.nodejs-icon {
+  --hover-color: #72aa62;
+}
+
+.html-icon:hover {
+  color: #e44d26;
+}
+
+.css-icon:hover {
+  color: #264de4;
+}
+
+.js-icon:hover {
+  color: #f0db4f;
+}
+
+.bootstrap-icon:hover {
+  color: #563d7c;
+}
+
+.sass-icon:hover {
+  color: #cd6799;
+}
+
+.git-icon:hover {
+  color: #f05033;
+}
+
+.java-icon:hover {
+  color: #e51837;
+}
+
+.nodejs-icon:hover {
+  color: #72aa62;
 }
 
 /*# sourceMappingURL=style.css.map */
