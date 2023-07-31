@@ -239,6 +239,50 @@ body {
   background-color: #2c303b;
 }
 
+.contenedor-cards .carta {
+  height: 350px;
+  width: 650px;
+  margin: 50px;
+  box-shadow: 5px 5px 20px black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.contenedor-cards .carta p {
+  visibility: hidden;
+  opacity: 0;
+}
+.contenedor-cards .carta img {
+  height: 350px;
+  width: 650px;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+.contenedor-cards .carta .intro {
+  height: 80px;
+  padding: 6px;
+  box-sizing: border-box;
+  position: relative;
+  bottom: 70px;
+  background: rgba(44, 48, 59, 0.5);
+  color: white;
+  transition: 0.5s;
+}
+.contenedor-cards .carta:hover {
+  cursor: pointer;
+}
+.contenedor-cards .carta:hover .intro {
+  height: 240px;
+  bottom: 200px;
+  background: rgba(44, 48, 59, 0.8);
+}
+.contenedor-cards .carta:hover p {
+  opacity: 1;
+  visibility: visible;
+}
+.contenedor-cards .carta:hover img {
+  transform: scale(1.1) rotate(-3deg);
+}
+
 @media (min-width: 992px) {
   .page-section .page-section-heading {
     font-size: 3rem;
@@ -257,6 +301,27 @@ body {
     font-size: 40px;
     top: 15px;
     right: 35px;
+  }
+}
+@media (min-width: 320px) {
+  .contenedor-cards .carta:hover .intro {
+    height: 100%;
+    bottom: 85%;
+    background: rgba(44, 48, 59, 0.8);
+  }
+}
+@media (min-width: 375px) {
+  .contenedor-cards .carta:hover .intro {
+    height: 100%;
+    bottom: 75%;
+    background: rgba(44, 48, 59, 0.8);
+  }
+}
+@media (min-width: 576px) {
+  .contenedor-cards .carta:hover .intro {
+    height: 100%;
+    bottom: 55%;
+    background: rgba(44, 48, 59, 0.8);
   }
 }
 @media screen and (max-width: 991px) {

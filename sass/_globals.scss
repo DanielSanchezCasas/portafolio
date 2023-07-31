@@ -109,17 +109,66 @@ body {
   color: #fff;
 }
 .copyright {
-  background-color:  components.$primary-color;
+  background-color: components.$primary-color;
 }
+
+.contenedor-cards {
+  // display: flex;
+
+  .carta {
+    height: 350px;
+    width: 650px;
+    margin: 50px;
+    box-shadow: 5px 5px 20px black;
+    border-radius: 10px;
+    overflow: hidden;
+    p {
+      visibility: hidden;
+      opacity: 0;
+    }
+    img {
+      height: 350px;
+      width: 650px;
+      border-radius: 3px;
+      transition: 0.5s;
+    }
+    .intro {
+      height: 80px;
+      // width: 350px;
+      padding: 6px;
+      box-sizing: border-box;
+      position: relative;
+      bottom: 70px;
+      background: rgba(components.$primary-color, 0.5);
+      color: white;
+      transition: 0.5s;
+    }
+  }
+  .carta:hover {
+    cursor: pointer;
+  }
+  .carta:hover .intro {
+    height: 240px;
+    bottom: 200px;
+    background: rgba(components.$primary-color, 0.8);
+  }
+  .carta:hover p {
+    opacity: 1;
+    visibility: visible;
+  }
+  .carta:hover img {
+    transform: scale(1.1) rotate(-3deg);
+  }
+}
+
 @media (min-width: 992px) {
   .page-section .page-section-heading {
     font-size: 3rem;
     line-height: 2.5rem;
   }
-  .page-section-dark .page-section-heading{ 
+  .page-section-dark .page-section-heading {
     font-size: 3rem;
     line-height: 2.5rem;
-    
   }
 }
 
@@ -131,6 +180,30 @@ body {
     font-size: 40px;
     top: 15px;
     right: 35px;
+  }
+}
+
+@media (min-width: 320px) {
+  .contenedor-cards .carta:hover .intro {
+    height: 100%;
+    bottom: 85%;
+    background: rgba(components.$primary-color, 0.8);
+  }
+}
+
+@media (min-width: 375px) {
+  .contenedor-cards .carta:hover .intro {
+    height: 100%;
+    bottom: 75%;
+    background: rgba(components.$primary-color, 0.8);
+  }
+}
+
+@media (min-width: 576px) {
+  .contenedor-cards .carta:hover .intro {
+    height: 100%;
+    bottom: 55%;
+    background: rgba(components.$primary-color, 0.8);
   }
 }
 
@@ -147,7 +220,7 @@ body {
   .overlay .overlay-content a {
     font-size: 24px;
   }
-  .overlay-content{
+  .overlay-content {
     margin-top: 2rem;
   }
   .overlay .close {
