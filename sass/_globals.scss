@@ -23,6 +23,10 @@ body {
   border-bottom: solid 7px components.$medium-secondary-color;
   background-color: components.$primary-color;
 }
+.main-menu li.active a {
+  color: components.$primary-color;
+  background-color: components.$dark-secondary-color;
+}
 
 .logo img {
   max-width: 4rem;
@@ -86,11 +90,11 @@ body {
 }
 
 .page-section {
-  padding: 3rem 0;
+  padding: 6.5rem 0;
 }
 .page-section-dark {
   background-color: components.$primary-dark-color;
-  padding: 3rem 0;
+  padding: 6.5rem 0;
   .page-section-heading {
     font-size: 2.25rem;
     line-height: 2rem;

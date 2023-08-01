@@ -149,6 +149,11 @@ body {
   background-color: #2c303b;
 }
 
+.main-menu li.active a {
+  color: #2c303b;
+  background-color: #fffe3e;
+}
+
 .logo img {
   max-width: 4rem;
 }
@@ -211,12 +216,12 @@ body {
 }
 
 .page-section {
-  padding: 3rem 0;
+  padding: 6.5rem 0;
 }
 
 .page-section-dark {
   background-color: #2c3e50;
-  padding: 3rem 0;
+  padding: 6.5rem 0;
 }
 .page-section-dark .page-section-heading {
   font-size: 2.25rem;

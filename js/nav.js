@@ -62,3 +62,26 @@ function toggleScrolling(enableScroll) {
     body.style.overflow = "hidden";
   }
 }
+
+$(document).ready(function() {
+  // Función para agregar la clase 'active' al elemento del menú según la sección visible en el viewport
+  function updateMenuActiveClass() {
+    var scrollPosition = $(window).scrollTop();
+
+    $('.main-menu li').removeClass('active');
+    $('.main-menu li a').each(function() {
+      var target = $(this).attr('href');
+      var targetPosition = $(target).offset().top;
+      var targetHeight = $(target).outerHeight();
+
+      if (scrollPosition >= targetPosition && scrollPosition < targetPosition + targetHeight) {
+        $(this).parent().addClass('active');
+      }
+    });
+  }
+
+  // Ejecutar la función al cargar la página y en cada evento de scroll
+  $(window).on('load scroll', function() {
+    updateMenuActiveClass();
+  });
+});
